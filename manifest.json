@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Squish and Merge",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/pull/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "browser_action": {
+    "default_title": "Squish or Squash",
+    "default_popup": "template.html"
+  }
+}
